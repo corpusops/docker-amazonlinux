@@ -65,8 +65,11 @@ jobs:
       fail-fast: false
       matrix:
         IMAGES:
-        - "library/amazonlinux/2 library/amazonlinux/latest library/amazonlinux/1"
-        - "library/amazonlinux/with-sources library/amazonlinux/1-with-sources library/amazonlinux/2-with-sources"
+        - "library/amazonlinux/latest library/amazonlinux/with-sources"
+        - "library/amazonlinux/2023"
+        - "library/amazonlinux/2022-with-sources library/amazonlinux/2022"
+        - "library/amazonlinux/2 library/amazonlinux/1"
+        - "library/amazonlinux/2-with-sources library/amazonlinux/1-with-sources"
         #- "corpusops/test/a corpusops/test/b corpusops/test/c"
         # all images that werent explicitly told to be built would be built in the next batches
         # we span them onto N jobs
